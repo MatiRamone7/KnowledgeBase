@@ -2,8 +2,7 @@
 
 ## So, what is the difference between authentication and authorization?
 Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.
-Authentication is used to verify that users really are who they represent themselves to be. Once this has been confirmed, authorization is then used to grant the user permission to access
-different levels of information and perform specific functions, depending on the rules established for different types of users.
+Authentication is used to verify that users really are who they represent themselves to be. Once this has been confirmed, authorization is then used to grant the user permission to access different levels of information and perform specific functions, depending on the rules established for different types of users.
 
 ### Authentication:
 - Determines whether users are who they claim to be	
@@ -27,11 +26,5 @@ different levels of information and perform specific functions, depending on the
 - What you are: This is biometric data such as a fingerprint, retinal scan, or facial recognition.
 
 ### Types of Authorization:
-Role-based access controls (RBAC): This authorization method gives users access to information based on their role within the organization. For example, all employees within a company may be able to view, but not modify,
-their personal information such as pay, vacation time, and 401K data. Yet human resources (HR) managers may be given access to all employees’ HR information with the ability to add, delete, and change this data.
-By assigning permissions according to each person’s role, organizations can ensure every user is productive, while limiting access to sensitive information.
-Attribute-based access control (ABAC): ABAC grants users permissions on a more granular level than RBAC using a series of specific attributes. This may include user attributes such as
-the user’s name, role, organization, ID, and security clearance. It may include environmental attributes such as the time of access, location of the data, and current organizational threat levels. 
-And it may include resource attributes such as the resource owner, file name, and level of data sensitivity. 
-ABAC is a more complex authorization process than RBAC designed to further limit access. 
-For example, rather than allowing all HR managers in an organization to change employees’ HR data, access can be limited to certain geographical locations or hours of the day to maintain tight security limits.
+Role-based access controls (RBAC): This authorization method gives users access to information based on their role within the organization. For example, all employees within a company may be able to view, but not modify, their personal information such as pay, vacation time, and 401K data. Yet human resources (HR) managers may be given access to all employees’ HR information with the ability to add, delete, and change this data.
+By assigning permissions according to each person’s role, organizations can ensure every user is productive, while limiting access to sensitive information. Attribute-based access control (ABAC): ABAC grants users permissions on a more granular level than RBAC using a series of specific attributes. This may include user attributes such as the user’s name, role, organization, ID, and security clearance. It may include environmental attributes such as the time of access, location of the data, and current organizational threat levels. And it may include resource attributes such as the resource owner, file name, and level of data sensitivity. ABAC is a more complex authorization process than RBAC designed to further limit access. For example, rather than allowing all HR managers in an organization to change employees’ HR data, access can be limited to certain geographical locations or hours of the day to maintain tight security limits.
