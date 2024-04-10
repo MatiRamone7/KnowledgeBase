@@ -19,7 +19,7 @@ Opaque tokens cannot be read by people that hold them since they are undecodable
 
 An opaque token's format is chosen by the issuer of the token. Usually, it's a string of numbers and/or characters that identifies some information in the database of the issuer. This is in contrast to JWTs where the holder of the token can't inspect it without contacting the issuer (ie the contents are opaque).
 
-## Clasified by purpose: Access Tokens (OAuth 2.0) y ID Tokens (OpenID Connect)
+## Clasified by purpose: Access Tokens (OAuth 2.0) and ID Tokens (OpenID Connect)
 
 ### Access Token:
 
