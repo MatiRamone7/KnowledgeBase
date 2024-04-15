@@ -54,7 +54,7 @@ This returns whether the given password is compatible with the defined criteria.
 
 Similar to the username, you can configure the format of a valid password in configuration. If you want to change that behavior, you can override this method.
 
-# Write methods and their default behaviours
+# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Write methods and their default behaviours ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
 
 ## void doAddUser(String userName, Object credential, String[] roleList, Map<String, String> claims, String profileName, boolean requirePasswordChange)
 
@@ -145,9 +145,6 @@ This method is used to update name of the group with the given current name.
 This method is used to delete the group with the name
 
 
+# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Read methods ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
 
-
-
-
-# Read methods
-# Implementations
+# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Implementations ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
