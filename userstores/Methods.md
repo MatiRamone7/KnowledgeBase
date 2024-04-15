@@ -1,5 +1,4 @@
-# <code style="color : fuchsia">Important Methods</code>
-# Important methods
++ # Important methods
 
 ## boolean doAuthenticate(String userName, Object credential)
 
