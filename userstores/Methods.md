@@ -1,4 +1,6 @@
-+ # Important methods
+# Important methods
+
+<span style="color:blue">some *blue* text</span>
 
 ## boolean doAuthenticate(String userName, Object credential)
 
