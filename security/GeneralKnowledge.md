@@ -65,7 +65,7 @@ Protocols: SSL/TLS, SSH, PGP
 Encryption algorithms: RSA, ECC
 
 
-File extensions:
+## File extensions:
 
 - .pem: A .pem is a de-facto file format called Privacy-Enhanced Mail. A PEM file can contain a lot of different things, such as certificates, private keys, public keys and lots of other things. A file being in PEM format says nothing about the content, just like something being Base64-encoded says nothing about the content.
 - .crt, .cer: This is another pseudo-format that is commonly used to store certificates. These can either be in the PEM or in the DER format.
