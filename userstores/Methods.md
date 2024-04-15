@@ -2,10 +2,6 @@
 
 ## boolean doAuthenticate(String userName, Object credential)
 
-![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
-![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png)
-![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png)
-
 ### Behaviour by default
 
 This method returns details on whether the given username and password are matched or not. The credential is usually a string literal.	
@@ -145,6 +141,122 @@ This method is used to update name of the group with the given current name.
 This method is used to delete the group with the name
 
 
-# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Read methods ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
+# ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Read methods and their default behaviours ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
+
+## boolean doCheckExistingUser(String userName)	
+
+Returns whether the provided userName already exists in the user store
+
+## boolean doCheckExistingRole(String roleName)	
+
+Returns whether the provided roleName already exists in the user store
+
+## String[] doListUsers(String filter, int maxItemLimit)	
+
+This method returns a list of usernames that match the given filter string.
+
+## String[] doGetRoleNames(String filter, int maxItemLimit)	
+
+Returns a list of role names that match with the given filter string.
+
+## String[] doGetExternalRoleListOfUser(String userName, String filter)	
+
+Returns a list of external role names of a given user that match with the given filter string
+
+## String[] doGetSharedRoleListOfUser(String userName, String tenantDomain, String filter)	
+
+This method returns a list of shared role names of a given user that match the given filter string.
+
+## Map<String, String> getUserPropertyValues(String userName, String[] propertyNames, String profileName)	
+
+This method returns values for the given propertyNames for a given userName and profileName.
+
+## String[] getUserListFromProperties(String property, String value, String profileName)	
+
+This returns a list of usernames that match with the given value of the given property and profileName.
+
+## String[] doGetDisplayNamesForInternalRole(String[] userNames)	
+
+Returns names to display in the UI for given usernames
+
+## Date getPasswordExpirationTime(String userName)	
+
+This returns the password expiry date of a given user. The default value is null.
+
+## int getUserId(String username)	
+
+This method returns the identifier of a given username. The default value is 0.
+
+## boolean doCheckIsUserInRole(String userName, String roleName)	
+
+True is returned if the given user is already mapped to the given role name.
+
+## String[] getProfileNames(String userName)	
+
+Returns a list of profile names mapped with a given username.
+
+## String[] doGetSharedRoleNames(String tenantDomain, String filter, int maxItemLimit)	
+
+This returns a list of role names that are associated with the given tenant domain and match with the filter.
+
+## String[] doGetUserListOfRole(String roleName, String filter)	
+
+This method returns a list of usernames that are mapped with the given rolename.
+
+## String[] getAllProfileNames()	
+
+All the profile names are returned including the default profile.
+
+## boolean isValidRememberMeToken(String userName, String token)	
+
+This method is used to check if the given token exists for the given user.
+
+## boolean isMultipleProfilesAllowed()	
+
+This returns whether this user store is allowed to have multiple profiles per user. The default value is false.
+
+## boolean isBulkImportSupported()	
+
+This method returns whether this user store allows bulk transactions or not.
+
+## String doGetGroupIdFromGroupName(String groupName)	
+
+This method returns group uuid which has the given group name.
+
+## String doGetGroupNameFromGroupId(String groupId)	
+
+This method returns group name which has the given group uuid.
+
+## Group doGetGroupFromGroupName(String groupName, List<String> requiredAttributes)	
+
+This method returns the group with the given group name.
+
+## Group doGetGroupFromGroupId(String groupId, List<String> requiredAttributes)	
+
+This method returns the group with the given group uuid.
+
+## List<Group> doGetGroupListOfUser(String userId, int limit, int offset, String sortBy, String sortOrder)	
+
+This method returns the group list of a given user.
+
+## List<Group> doListGroups(Condition condition, int limit, int offset, String sortBy, String sortOrder)	
+
+This method return the group list which matches with the given condition.
 
 # ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Implementations ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png)
+
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Class org.wso2.carbon.user.core.jdbc.UniqueIDJDBCUserStoreManager	
+
+If your user details are stored in a database, you must use this user store manager implementation. With the abstraction provided in this implementation, most of the JDBC-based scenarios can be handled without writing a custom user store manager.
+
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Class org.wso2.carbon.user.core.ldap.UniqueIDReadOnlyLDAPUserStoreManager	
+
+You can use this class if you have an LDAP user store. This implementation does not allow you to insert or update users from the WSO2 Identity Server side. Instead, you can only read and use them in the product.
+
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Class org.wso2.carbon.user.core.ldap.UniqueIDReadWriteLDAPUserStoreManager	
+
+If you want to allow WSO2 Identity Server to manipulate user store data, you need to use this implementation.
+
+![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) Class org.wso2.carbon.user.core.ldap.UniqueIDActiveDirectoryLDAPUserStoreManager	
+
+Active Directory also can be used as the user store of WSO2 Identity Server and you can configure it using this user store manager implementation.
